@@ -6,4 +6,7 @@ let strEndCheck = (str1,str2) => {
        return false
    }
 }
-console.log(strEndCheck('siddharth', 'rth'));
+//console.log(strEndCheck('siddharth', 'rth'));
+
+// using directly endsWith method
+console.log('helo'.endsWith('lo'))
