@@ -3,4 +3,3 @@ let objEqual = (obj1, obj2) =>
 
 console.log(objEqual({ age: 25, hair: 'long', beard: true }, { hair: 'long', beard: true })); // true
 console.log(objEqual({ hair: 'long', beard: true }, { age: 25, hair: 'long', beard: true })); // false
-console.log(objEqual({ hair: 'long', beard: true }, { age: 26, hair: 'long', beard: true })); // false
