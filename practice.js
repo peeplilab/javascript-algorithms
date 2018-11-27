@@ -1,113 +1,37 @@
-//let person = new Object();
-//console.log(typeof person);
-//console.log(person.constructor);
-let x = {a:'b'};
+//display output:-  Today is: Tuesday
+//current time is : 10 PM : 30 : 38
 
-var number = new Object(12),
-anotherNumber = new Object(3*2),
-string = new Object("test"),
-person = new Object({name: "John", surname: "Smith"});
-//console.log(x);
+let displayTime = () => {
+    let dayNumber = new Date().getDay();
+    let dayList = ['sun','mon','tue','wed','thu','fri','sat'];
+    console.log(dayList[dayNumber]);   
+     
+    let today = new Date();
+    let hours = today.getHours();
+    let mins  = today.getMinutes();
+    let secs  = today.getSeconds();
+    let ampm  = (hours <= 12)? 'AM':'PM';
+    let hour  = (hours >= 12)? hours - 12: hours;
 
-function Alpa(name,age) {
-    this.name = name,
-    this.age = age
-}
-Alpa.prototype.introduction = function() {
-    return(this.name + this.age);
-    
-}
-Alpa.prototype.sayHello = function() {
-    return('HELLO')
-}
-let b = new Alpa('kitty',23);
-//console.log( b.name + ' says ' + b.sayHello())
-
-//factorialize
-let f = (n) => {
-    if(n===1) {
-        return n
-    } else {
-        return n * f(n -1)
-    }
-}
-//console.log(f(4));
-
-
-//longestWord
-let longestWord = (str) => {
-    let words = str.split(' ');
-    let biggest = 0;
-    for(let i = 0; i < words.length; i++) {
-        if(words[i].length > biggest) {
-            biggest = words[i].length
+    if(hour === 0 && ampm === 'PM') {
+        if( mins === 0 && secs === 0 ) {
+            hour = 12;
+            ampm = 'NOON';
+        } else {
+            hour = 12;
+            ampm = 'PM'
         }
     }
-    return biggest;
-
-}
-//console.log(longestWord('hello wmoomof fdfdfd '));
-
-//largest Num Array
-
-let largestNum = (arr) => {
-    let biggest = 0;
-    return arr.reduce((x,y) => {
-        return Math.max(x,y)
-    })
-}
-
-//console.log(largestNum([3,4,5,6,7]));
-
-//largest in 2d arr
-let largestNInArr = (arr) => {
-    let biggestNums = [];
-    for(let i = 0; i < arr.length; i++) {
-        let biggest = arr[i][0];
-        for(let j = 1; j < arr[i].length; j++) {
-            if(arr[i][j] > biggest) {
-                biggest = arr[i][j]
-            }
+    if(hour === 0 && ampm === 'AM') {
+        if( mins === 0 && secs === 0) {
+            ampm = 'MIDNIGHT';
+            hour = 12;
+        } else {
+            hour = 12;
+            ampm = 'AM'
         }
-        biggestNums[i] = biggest
     }
-    return biggestNums;
+    console.log('curent time iss ' + hour + ampm + mins + secs);
+
 }
-
-//console.log(largestNInArr([[4,4,4,55],[33,4444,44444,44444],[4535345,345345345345345345,345]]));
-
-//endswith
-let strEndCheck = (str1,str2) => {
-    let endCheck = str1.slice(-(str2.length)); //str ending
-    console.log(endCheck);
-    
-    if(endCheck === str2) {
-        return true
-    }
-    return false;
-}
-console.log(strEndCheck('hello','lo'));
-
-//returnStrNTimes
-let repeat = (str,n) => {
-    let final = ''
-    for(let i = 0; i < n; i++) {
-         final += str;
-    }
-    return final
-}
-//console.log(repeat('fck', 4));
-
-//console.log('abcde'.slice(1));
-//console.log('abcde'.slice(-4,-1));
-
-let repeatt = (str, n) => {
-    let final = '';
-    for(let i = 0; i <n ; i++ ) {
-        final += str;
-    }
-    return final
-}
-//console.log(repeatt('hhhhe',3));
-
-//
+displayTime()

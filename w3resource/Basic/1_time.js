@@ -3,7 +3,7 @@
 let today = new Date();
 let day = today.getDay();
 let daylist = ['sun','mon','tue','wed','thur','fri','sat']
-console.log(daylist[day]);
+console.log('Today is ' +daylist[day]);
 let hour = today.getHours();
 let min = today.getMinutes();
 let sec = today.getSeconds();
