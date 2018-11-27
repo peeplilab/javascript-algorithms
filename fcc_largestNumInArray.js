@@ -1,5 +1,4 @@
-
-//using reduce
+//using reduce find largest number in an array
 
 let largestNum = (arr) => {
     return arr.reduce((x,y) => {

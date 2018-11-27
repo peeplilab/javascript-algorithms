@@ -1,3 +1,4 @@
+//remove falsy values from array
 let removeF = (arr) => {
 
     return arr.filter(Boolean);

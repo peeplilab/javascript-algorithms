@@ -79,12 +79,14 @@ let largestNInArr = (arr) => {
 //endswith
 let strEndCheck = (str1,str2) => {
     let endCheck = str1.slice(-(str2.length)); //str ending
+    console.log(endCheck);
+    
     if(endCheck === str2) {
         return true
     }
     return false;
 }
-//console.log(strEndCheck('heeelo','lo'));
+console.log(strEndCheck('hello','lo'));
 
 //returnStrNTimes
 let repeat = (str,n) => {
@@ -94,4 +96,18 @@ let repeat = (str,n) => {
     }
     return final
 }
-console.log(repeat('fck', 4));
+//console.log(repeat('fck', 4));
+
+//console.log('abcde'.slice(1));
+//console.log('abcde'.slice(-4,-1));
+
+let repeatt = (str, n) => {
+    let final = '';
+    for(let i = 0; i <n ; i++ ) {
+        final += str;
+    }
+    return final
+}
+//console.log(repeatt('hhhhe',3));
+
+//
