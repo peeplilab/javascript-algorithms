@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 
 var num = 3232323;
 var str = num.toString();
@@ -13,4 +11,3 @@ for (var x = 1; x < str.length; x++) {
   }
 }
 console.log(result.join(''));
->>>>>>> corrections
