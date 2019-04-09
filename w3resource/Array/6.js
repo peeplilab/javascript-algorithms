@@ -1,17 +1,16 @@
-//insert dashes between two consecutive even numbers
+<<<<<<< HEAD
 
-let dashInserter = (numm) => {
-  var num = numm.toString();
-  let newArray = [num[0]];
-  for(var i = 1; i < num.length-1; i++) {
-    if((num[i - 1] % 2  === 0 ) && ( num[i] % 2)) {
-      newArray.push( '-', num)
-    } else {
-      newArray.push(num)
-    }
+
+var num = 3232323;
+var str = num.toString();
+var result = [str[0]];
+
+for (var x = 1; x < str.length; x++) {
+  if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
+    result.push('-', str[x]);
+  } else {
+    result.push(str[x]);
   }
-
 }
-
-console.log(dashInserter(23423452345234524))
-  
+console.log(result.join(''));
+>>>>>>> corrections
