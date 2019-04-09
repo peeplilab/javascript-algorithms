@@ -1,7 +1,7 @@
 let area = (b,h) => {
     console.log(0.5 * b * h);
-
 }
+
 area(3,4)
 
 //sides x,y,z
