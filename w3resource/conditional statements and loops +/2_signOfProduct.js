@@ -13,5 +13,4 @@ let signOfProduct = (x, y, z) => {
   }
 }
 
-
 signOfProduct(-2, -2, 3)

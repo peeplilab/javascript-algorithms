@@ -1,30 +1,27 @@
-let oddEven = (...args) => {
-    args.forEach(x => {
-        if (x === 0) {
-            console.log('eve')
-        } else if (x % 2 === 0) {
-            console.log('eve')
-        } else {
-            console.log('odd');
-
-        }
-    })
+let oddEven = (n) => {
+  for( let i =1; i <=n; ++i ) {
+    if ( i % 2 === 0 ) {
+      console.log( i + 'is even');      
+    } else {
+      console.log( i + 'is odd');      
+    }
+  }
 }
 
-//oddEven(6,5,56,65,6)
+oddEven(25)
 
 //real sol
 let oddEvenFinder = () => {
-    for (let i = 0; i <= 15; ++i) {
-        if (i === 0) {
-            console.log(i + " is even")
-        } else if (i % 2 === 0) {
-            console.log(i + " is even");
-        }
-        else {
-            console.log(i + " is odd");
-        }
+  for (let i = 0; i <= 15; ++i) {
+    if (i === 0) {
+      console.log(i + " is even")
+    } else if (i % 2 === 0) {
+      console.log(i + " is even");
     }
+    else {
+      console.log(i + " is odd");
+    }
+  }
 }
 
-oddEvenFinder()
+//oddEvenFinder()

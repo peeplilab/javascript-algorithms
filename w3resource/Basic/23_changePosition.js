@@ -17,4 +17,15 @@ let changeChar = (str) => {
     let midChar = str.substring(1, str.length - 1);
     return (str.charAt(str.length - 1)) + midChar + str.charAt(0)
 }
-console.log(changeChar('hello'));
+//console.log(changeChar('hello'));
+
+
+//remove 1st and last character in string
+let radicalRemover =  (str) => {
+  if(str.length < 1) {
+    return 'enter proper string'
+  }
+  return str.slice(1, str.length-1);
+}
+
+console.log(radicalRemover('gegege'));

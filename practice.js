@@ -1,6 +1,14 @@
-//csv to array
-let csvToArray = (str = 'who is  your daddy') => {
-  return (str.split(' '))
+'use strict'
+var person = {
+  name: 'akhilesh',
+  hello: function(thing) {
+    console.log(this.name + 'says hello ' + thing);
+    
+  }
 }
 
-console.log(csvToArray())
+let boundHello = function(thing) {
+  return person.hello.call(person, thing)
+}
+
+boundHello('amazing')
