@@ -16,9 +16,7 @@ function two() {
 //two();
 
 //even though i am calling function "one()" first its
-//response comes last? Yes, our logic has made it so - but in real time - time value -
-//is unknown - so does wait till and stop the event loop in javascript?
-
+//response comes last? 
 //It’s not that JavaScript didn’t execute our functions in the order we wanted it to,
 // it’s instead that JavaScript didn’t wait for a response from one() before moving on to execute two().
 
