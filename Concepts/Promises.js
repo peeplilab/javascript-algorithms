@@ -64,3 +64,24 @@ main()
 
 //Explanation: Had the promises been non-blocking after would 
 // have been printed before "AA GAYA DATA YAY". 
+
+//Power of promises in writing clean and manageable code
+function getData() {
+    return Promise.resolve('Do some stuff');
+}
+
+function changeDataFormat(){
+    // ...
+}
+
+function storeData(){
+    // ...
+}
+
+getData()
+    .then(changeDataFormat)
+    .then(storeData)
+    .catch((e) => {
+        // Handle the error!
+    })
+ 
