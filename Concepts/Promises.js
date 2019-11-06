@@ -67,21 +67,20 @@ main()
 
 //Power of promises in writing clean and manageable code
 function getData() {
-    return Promise.resolve('Do some stuff');
+  return Promise.resolve('Do some stuff');
 }
 
-function changeDataFormat(){
-    // ...
+function changeDataFormat() {
+  // ...
 }
 
-function storeData(){
-    // ...
+function storeData() {
+  // ...
 }
 
 getData()
-    .then(changeDataFormat)
-    .then(storeData)
-    .catch((e) => {
-        // Handle the error!
-    })
- 
+  .then(changeDataFormat)
+  .then(storeData)
+  .catch((e) => {
+    // Handle the error!
+  })
